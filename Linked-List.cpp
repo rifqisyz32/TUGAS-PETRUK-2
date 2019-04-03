@@ -213,6 +213,22 @@ void Hapus_data_yang_telah_disisipkan_list()
  getch();
 }
 
+int init(int nilai){
+ angka *baru;
+  baru = new angka;
+  baru->urut=nilai;
+  baru->next = NULL;
+  if(pertama_ptr == NULL)
+  {
+    pertama_ptr=baru;
+    pertama_ptr->next = NULL;
+  }
+  else
+  {
+    baru->next = pertama_ptr;
+    pertama_ptr = baru;
+  }
+}
 
 int main()
 {
