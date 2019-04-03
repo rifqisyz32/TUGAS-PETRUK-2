@@ -4,6 +4,38 @@
 
 using namespace std;
 
+class angka
+{
+	
+public:
+
+  int urut;
+  angka *next; 
+}; 
+  angka *pertama_ptr = NULL;
+  angka *posisi;         
+  int option = 0; 
+
+void tambah_data_pertama_list()
+{
+  angka *baru;
+  baru = new angka;
+  cout << "Masukkan Data     : ";
+  cin >> baru->urut;
+  baru->next = NULL;
+  if(pertama_ptr == NULL)
+  {
+    pertama_ptr=baru;
+    pertama_ptr->next = NULL;
+  }
+  else
+  {
+    baru->next = pertama_ptr;
+    pertama_ptr = baru;
+  }
+} 
+
+
 int main()
 {
   cout<<"\t\t\t\t\t    ------------------------ \n";
