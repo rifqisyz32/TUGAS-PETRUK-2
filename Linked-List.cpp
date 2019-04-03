@@ -35,6 +35,32 @@ void tambah_data_pertama_list()
   }
 } 
 
+void tambah_data_angka_di_akhir()
+  {
+  angka *temp, *temp2;   
+  temp = new angka; 
+  cout << "Masukkan Data     : ";
+  cin >>   temp->urut;
+  temp->next = NULL; 
+
+
+  if (pertama_ptr == NULL)
+  {
+    pertama_ptr = temp;
+    posisi = pertama_ptr;
+  }
+  else
+  {
+    temp2 = pertama_ptr;
+
+    while (temp2->next != NULL)
+    {
+      temp2 = temp2->next; 
+      
+    }
+  temp2->next = temp;
+  }
+} 
 
 int main()
 {
