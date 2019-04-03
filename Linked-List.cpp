@@ -269,3 +269,17 @@ int main()
     cout << "6. Hapus data yang telah disisipkan" << endl;
     cout << endl << " Pilihan >> ";
     cin >> option; 
+    switch (option){
+  case 1 : tambah_data_pertama_list(); 
+    break;
+  case 2 : tambah_data_angka_di_akhir();
+    break;
+  case 3 : tambah_data_yang_akan_disisipkan_list();
+    break;
+  case 4 : hapus_pertama_angka();
+    break;
+  case 5 : hapus_akhir_angka();
+    break;
+  case 6 : Hapus_data_yang_telah_disisipkan_list();
+   }}  
+while (option != 0); }
