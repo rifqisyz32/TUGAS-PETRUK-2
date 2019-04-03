@@ -1,3 +1,9 @@
+//Nama Kelompok:
+//1. Rifqi Syamsu Z     (1817051032)
+//2. Rifqi Adiyatma     (1817051055)
+//3. Tommy Ferdyansah A (1817051072)
+//4. Gilang Rahman A    (1817051075)
+
 #include <iostream>
 #include <cstdlib>
 #include <conio.h> 
