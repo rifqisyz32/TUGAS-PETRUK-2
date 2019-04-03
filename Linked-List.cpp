@@ -175,6 +175,43 @@ void tambah_data_yang_akan_disisipkan_list()
     getch();
   } 
 } 
+void Hapus_data_yang_telah_disisipkan_list()
+{
+  int banyakdata,posisi_hapus,poshapus;
+  angka *hapus, *bantu;
+  if(pertama_ptr != NULL)
+  {
+    cout<<" Data yang akan dihapus  : ";
+    cin>>posisi_hapus;
+    banyakdata=1;
+    bantu=pertama_ptr;
+    while(bantu->next != NULL)
+    {
+      bantu=bantu->next;
+      banyakdata++;
+    }
+    if((posisi_hapus<1)||(posisi_hapus>banyakdata))
+    {
+      cout<<"Belum ada data, isi data terlebih dahulu \n";
+    }
+    else
+    {
+      bantu=pertama_ptr;
+      poshapus=1;
+      while(poshapus<(posisi_hapus-1))
+      {
+        bantu=bantu->next;
+        poshapus++;
+      }
+      hapus=bantu->next;
+      bantu->next=hapus->next;
+      delete hapus;
+    }
+ }
+ else 
+    cout<<"Maaf data anda belum ada, isi data terlebih dulu ";
+ getch();
+}
 
 
 int main()
