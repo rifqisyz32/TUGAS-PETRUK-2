@@ -245,3 +245,27 @@ int main()
 	cout<<"\t\t\t\t\t\t    ----------- \n";
 	cout<<"\t\t\t\t\t\t   | LINKED LIST |\n";
 	cout<<"\t\t\t\t\t\t    ----------- \n";
+  pertama_ptr = NULL;
+  
+  init(1);
+  init(8);
+  init(7);
+  init(5);
+  init(3);
+  init(9);
+  init(0);
+  do
+  {
+
+    display_list();
+    cout << endl;
+    cout << "MENU PILIHAN : " << endl;
+    cout << "0. Keluar program." << endl;
+    cout << "1. Tambah data pertama" << endl;
+    cout << "2. Tambah data akhir" << endl;
+    cout << "3. Tambah data yang akan disisipkan "<< endl;
+    cout << "4. Hapus data pertama" << endl;
+    cout << "5. Hapus data akhir" << endl;
+    cout << "6. Hapus data yang telah disisipkan" << endl;
+    cout << endl << " Pilihan >> ";
+    cin >> option; 
