@@ -120,7 +120,62 @@ void hapus_akhir_angka()
     }
 
    }
+}
+void pindah_posisi_sebelumnya()
+{
+  if (posisi->next == NULL)
+  cout << "Anda berada pada akhir data." << endl;
+  else
+  posisi = posisi->next; 
 } 
+
+void pindah_posisi_berikutnya()
+{
+  if (posisi == pertama_ptr)
+    cout << "Anda berada pada pertama data" << endl;
+  else
+  {
+   angka *previous;     
+    previous = pertama_ptr; 
+    while (previous->next != posisi) 
+    { 
+      previous = previous->next;
+    }
+    posisi = previous;
+  }
+}
+
+void tambah_data_yang_akan_disisipkan_list()
+{
+  angka *baru, *bantu;
+  int posisi_sisip;
+  if(pertama_ptr != NULL)
+  {
+  
+   
+    cout<<"Akan disisip sebelum Data Ke ? : ";
+    cin>>posisi_sisip;
+    baru =new angka;
+   bantu=pertama_ptr;
+     
+    for(int i=1;i<posisi_sisip-1;i++) {
+      if(bantu->next != NULL)
+        bantu=bantu->next;
+      else
+        break; 
+    }
+  cout << "Masukkan Data     : ";
+  cin >> baru->urut;
+  baru->next=bantu->next;
+  bantu->next=baru;
+  }
+  else
+  {
+    cout<<"Maaf data anda belum ada, isi data terlebih dulu";
+    getch();
+  } 
+} 
+
 
 int main()
 {
