@@ -62,6 +62,32 @@ void tambah_data_angka_di_akhir()
   }
 } 
 
+void display_list()
+{
+  angka *temp;
+  temp = pertama_ptr;
+  cout << endl;
+  cout << "DATA [";  
+  if (temp == NULL)
+    cout << "Data kosong" << endl;
+  else
+  {
+    while (temp != NULL)
+    {  
+     
+     cout << "" << temp->urut << ",";
+     
+     if (temp == posisi)
+        cout << "     <<posisi angka";
+
+     temp = temp->next; 
+    }
+    cout << "] ";  
+    cout << "list" << endl;
+  }
+  
+} 
+
 int main()
 {
   cout<<"\t\t\t\t\t    ------------------------ \n";
