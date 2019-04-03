@@ -87,6 +87,40 @@ void display_list()
   }
   
 } 
+void hapus_pertama_angka()
+{
+  angka *temp;
+  temp = pertama_ptr;
+  pertama_ptr = pertama_ptr->next;
+  delete temp;
+} 
+
+void hapus_akhir_angka()
+{
+  angka *temp1, *temp2;
+  if (pertama_ptr == NULL)
+    cout << "Data tidak ada" << endl;
+  else
+  {
+    temp1 = pertama_ptr;
+    if (temp1->next == NULL)
+    {
+      delete temp1;
+      pertama_ptr = NULL;
+    }
+    else 
+    {
+      while (temp1->next != NULL)
+      {
+        temp2 = temp1;
+        temp1 = temp1->next;
+      }
+      delete temp1;
+      temp2->next = NULL;
+    }
+
+   }
+} 
 
 int main()
 {
